@@ -1,3 +1,4 @@
+let yesClicked = false;
 const wrapper = document.querySelector(".wrapper");
 const question = document.querySelector(".question");
 const img = document.querySelector(".img");
@@ -6,10 +7,15 @@ const noBtn = document.querySelector(".no-btn");
 const secondQuestion = document.querySelectorAll(".question")[1];
 
 yesBtn.addEventListener("click", () => {
-  question.innerHTML = "I like you";
-  secondQuestion.innerHTML = "How about you?"; 
-  img.src =
-    "https://raw.githubusercontent.com/DzarelDeveloper/Img/main/AskCrush1.png";
+  if (!yesClicked) {
+    question.innerHTML = "I like you";
+    secondQuestion.innerHTML = "How about you?"; 
+    img.src = "https://i.pinimg.com/736x/35/44/70/354470b3c03b8f20036af3c962b97698.jpg";
+    yesBtn.innerHTML = "reply";
+    yesClicked = true;
+  } else {
+    window.location.href = "https://wa.me/6281383225316?text=reply%20message%20whatever";
+  }
 });
 
 noBtn.addEventListener("mouseover", () => {

@@ -8,7 +8,7 @@ const secondQuestion = document.querySelectorAll(".question")[1];
 
 yesBtn.addEventListener("click", () => {
   if (!yesClicked) {
-    question.innerHTML = "21 Desember 2024 ❤";
+    question.innerHTML = "21 December 2024 ❤";
     secondQuestion.innerHTML = "what's your answer?"; 
     img.src = "https://i.pinimg.com/736x/35/44/70/354470b3c03b8f20036af3c962b97698.jpg";
     yesBtn.innerHTML = "reply";
